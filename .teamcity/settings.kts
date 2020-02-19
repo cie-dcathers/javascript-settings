@@ -143,6 +143,6 @@ object Template_1 : Template({
 })
 
 object HttpsGithubComG0t4teamcityCourseCards : GitVcsRoot({
-    name = "https://github.com/g0t4/teamcity-course-cards"
-    url = "https://github.com/g0t4/teamcity-course-cards"
+    name = "https://github.com/cie-dcathers/teamcity-course-cards.git"
+    url = "https://github.com/cie-dcathers/teamcity-course-cards.git"
 })

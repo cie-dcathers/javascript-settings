@@ -83,10 +83,10 @@ object id02Firefox : BuildType({
 object id02InternetExplorer : BuildType({
     templates(Template_1)
     id("02InternetExplorer")
-    name = "02. Internet Explorer"
+    name = "02. Edge"
 
     params {
-        param("Browser", "IE")
+        param("Browser", "Edge")
     }
 
     dependencies {

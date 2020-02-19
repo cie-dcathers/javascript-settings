@@ -33,7 +33,6 @@ project {
 
     buildType(id02Chrome)
     buildType(id01FastTests)
-    buildType(id02InternetExplorer)
     buildType(id03DeployToStaging)
     buildType(id02Firefox)
 
@@ -80,21 +79,6 @@ object id02Firefox : BuildType({
     }
 })
 
-object id02InternetExplorer : BuildType({
-    templates(Template_1)
-    id("02InternetExplorer")
-    name = "02. Edge"
-
-    params {
-        param("Browser", "Edge")
-    }
-
-    dependencies {
-        snapshot(id01FastTests) {
-        }
-    }
-})
-
 object id03DeployToStaging : BuildType({
     id("03DeployToStaging")
     name = "03. Deploy To Staging"
@@ -108,8 +92,7 @@ object id03DeployToStaging : BuildType({
         }
         snapshot(id02Firefox) {
         }
-        snapshot(id02InternetExplorer) {
-        }
+        
     }
     triggers {
             vcs {

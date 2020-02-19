@@ -1,6 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
-import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
 /*
@@ -131,13 +130,6 @@ object Template_1 : Template({
             name = "Browser Tests"
             id = "RUNNER_7"
             scriptContent = "npm test -- --single-run --browsers %Browser% --colors false --reporters teamcity"
-        }
-    }
-
-    triggers {
-        vcs {
-            id = "vcsTrigger"
-            branchFilter = ""
         }
     }
 })

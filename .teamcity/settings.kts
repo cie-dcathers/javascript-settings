@@ -111,6 +111,14 @@ object id03DeployToStaging : BuildType({
         snapshot(id02InternetExplorer) {
         }
     }
+    
+    triggers {
+        vcs {
+            id = "vcsTrigger"
+            branchFilter = ""
+        }
+    }
+
 })
 
 object Template_1 : Template({
@@ -134,12 +142,7 @@ object Template_1 : Template({
         }
     }
 
-    triggers {
-        vcs {
-            id = "vcsTrigger"
-            branchFilter = ""
-        }
-    }
+    
 })
 
 object HttpsGithubComG0t4teamcityCourseCards : GitVcsRoot({
